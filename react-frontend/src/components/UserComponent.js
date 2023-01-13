@@ -27,18 +27,24 @@ class UserComponent extends React.Component {
 
 	render() {
 		return (
-			<Box sx={{ flexGrow: 1 }}>
-				<Grid container spacing={2}>
+			<Box
+				display="flex"
+				justifyContent="center"
+				alignItems="center"
+				minHeight="50vh"
+				sx={{ flexGrow: 2 }}
+			>
+				<Grid container maxWidth="100vh" spacing={2}>
 					<Grid item xs={4}>
 						<TableContainer component={Paper}>
 							<Table
-								sx={{ minWidth: 650 }}
+								sx={{ minWidth: 300 }}
 								aria-label="simple table"
 							>
 								<TableHead>
 									<TableRow>
 										<TableCell align="center">
-											Dessert (100g serving)
+											Physicians
 										</TableCell>
 									</TableRow>
 								</TableHead>
@@ -49,6 +55,15 @@ class UserComponent extends React.Component {
 											sx={{
 												"&:last-child td, &:last-child th": {
 													border: 0
+												},
+												"&:hover": {
+													backgroundColor:
+														"primary.main",
+													opacity: [
+														0.9,
+														0.8,
+														0.7
+													]
 												}
 											}}
 										>
@@ -76,13 +91,27 @@ class UserComponent extends React.Component {
 					<Grid item xs={8}>
 						<TableContainer component={Paper}>
 							<Table
-								sx={{ minWidth: 650 }}
+								sx={{ minWidth: 300 }}
 								aria-label="simple table"
 							>
-								<TableHead>
+								<TableHead
+									sx={{
+										backgroundColor:
+											"primary.dark"
+									}}
+								>
 									<TableRow>
 										<TableCell align="center">
-											Dessert (100g serving)
+											#
+										</TableCell>
+										<TableCell align="center">
+											Name
+										</TableCell>
+										<TableCell align="center">
+											Time
+										</TableCell>
+										<TableCell align="center">
+											Kind
 										</TableCell>
 									</TableRow>
 								</TableHead>
@@ -104,7 +133,22 @@ class UserComponent extends React.Component {
 													>
 														<TableCell align="center">
 															{
+																a.id
+															}
+														</TableCell>
+														<TableCell align="center">
+															{
 																a.name
+															}
+														</TableCell>
+														<TableCell align="center">
+															{
+																a.date
+															}
+														</TableCell>
+														<TableCell align="center">
+															{
+																a.kind
 															}
 														</TableCell>
 													</TableRow>
