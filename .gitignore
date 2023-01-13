@@ -21,3 +21,17 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+.DS_Store
+# Ignore Gradle GUI config
+gradle-app.setting
+.idea/*
+.gradle
+/build/
+HELP.md
+
+!gradle-wrapper.jar
+
+Users
+reat-frontend/node_modules
+
+react-frontend/package.json
